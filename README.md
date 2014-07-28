@@ -10,32 +10,31 @@ The DT Plugin displays dates with formatting and allows you to add days, months,
 ## Change Log
 
 
-- Version 1.4.2
+- Version 1.4.2  
 Fixed bug in 2.8.0 ( Thanks <a href="http://devot-ee.com/profile/user90086456"> @springworks</a> )
 
-- Version 1.4.1 
+- Version 1.4.1  
 Fixed Count and total_results  bug by using correct template parser  (Thanks <a href="http://devot-ee.com/members/profile/bransinanderson">@bransin</a>)
 
-- Version 1.4
+- Version 1.4  
 Added dt_no_results to fix no_results bug when wrapping entry loops
 
-- Version 1.3
+- Version 1.3  
 Added wrap tag for using with entry loops
 
-- Version 1.1
+- Version 1.1  
 Fixed parse bug (thanks Ben)
  
-- Version 1 
+- Version 1  
 Added hour, minute, second to plugin
 EE format is now default - use ee_format="false" for php format
 
-- Version 0.2 
+- Version 0.2  
 Update to include EE date formats by using ee_format="true"
 Also fixed constructor
 
-- Version 0.1 
+- Version 0.1  
 Initial release
-ail any bugs or questions to dev@viminteractive.com
 
 ***
 
