@@ -51,27 +51,26 @@ class Dt
 	function Dt()
 	{
 
-		
-		$this->EE =& get_instance();
-		$this->_format = ($this->EE->TMPL->fetch_param('format') ? $this->EE->TMPL->fetch_param('format') : '%m/%d/%y');
+	
+		$this->_format = (ee()->TMPL->fetch_param('format') ? ee()->TMPL->fetch_param('format') : '%m/%d/%y');
 
-		$this->_ee_format = ($this->EE->TMPL->fetch_param('ee_format') == "false" ? false : true);
+		$this->_ee_format = (ee()->TMPL->fetch_param('ee_format') == "false" ? false : true);
 		
 		// set month . day . year	
-		$this->_d = ($this->EE->TMPL->fetch_param('day')	? $this->EE->TMPL->fetch_param('day')	: 0);
-		$this->_m = ($this->EE->TMPL->fetch_param('month')	? $this->EE->TMPL->fetch_param('month')	: 0);
-		$this->_y = ($this->EE->TMPL->fetch_param('year')	? $this->EE->TMPL->fetch_param('year') 	: 0);
+		$this->_d = (ee()->TMPL->fetch_param('day')	? ee()->TMPL->fetch_param('day')	: 0);
+		$this->_m = (ee()->TMPL->fetch_param('month')	? ee()->TMPL->fetch_param('month')	: 0);
+		$this->_y = (ee()->TMPL->fetch_param('year')	? ee()->TMPL->fetch_param('year') 	: 0);
 
 		// set hour . minute . second
-		$this->_h = ($this->EE->TMPL->fetch_param('hour')	? $this->EE->TMPL->fetch_param('hour')	: 0);
-		$this->_i = ($this->EE->TMPL->fetch_param('minute')	? $this->EE->TMPL->fetch_param('minute'): 0);
-		$this->_s = ($this->EE->TMPL->fetch_param('second')	? $this->EE->TMPL->fetch_param('second'): 0);
+		$this->_h = (ee()->TMPL->fetch_param('hour')	? ee()->TMPL->fetch_param('hour')	: 0);
+		$this->_i = (ee()->TMPL->fetch_param('minute')	? ee()->TMPL->fetch_param('minute'): 0);
+		$this->_s = (ee()->TMPL->fetch_param('second')	? ee()->TMPL->fetch_param('second'): 0);
 
 		// localize date
-		$this->localize = ($this->EE->TMPL->fetch_param('localize') == "false" ? false : true);
+		$this->localize = (ee()->TMPL->fetch_param('localize') == "false" ? false : true);
 		$this->offset 	= strtotime(gmdate("M d Y H:i:s")) - strtotime(date("M d Y H:i:s"));
 
-		$dt = ($this->EE->TMPL->fetch_param('set') ? $this->EE->TMPL->fetch_param('set') : '');
+		$dt = (ee()->TMPL->fetch_param('set') ? ee()->TMPL->fetch_param('set') : '');
 
 		$this->_set($dt);
 
@@ -95,7 +94,7 @@ class Dt
 	{
 		if ($this->_ee_format == true)
 		{
-			return $this->EE->localize->format_date($this->_format,$this->_dt);
+			return ee()->localize->format_date($this->_format,$this->_dt);
 		}
 
 		return strftime($this->_format,$this->_dt);
@@ -113,7 +112,7 @@ class Dt
 
 		$oldStamp = $this->_dt;
 
-		if ($dt=="")
+		if ($dt=="" || $dt=="//")
 			$this->_dt=time();
 		else
 			$this->_dt = $this->_parseDate($dt);
@@ -164,9 +163,7 @@ class Dt
 				$day+$this->_d, 
 				$year+$this->_y
 				));
-
-
-
+			
 			$this->return_data = $this->_return();
 	}
 	// --------------------------------------------------------------------
@@ -182,11 +179,11 @@ class Dt
 			'month' => $this->_dp['mon'],
 			'day' 	=> $this->_dp['mday'],
 			'dt'	=> $this->_dt,
-			'dt_ee'	=> $this->EE->localize->format_date('%Y-%m-%d %H:%i',$this->_dt)
+			'dt_ee'	=> ee()->localize->format_date('%Y-%m-%d %H:%i',$this->_dt)
 			);
 		
-		// $_return = $this->EE->TMPL->parse_variables( $this->EE->TMPL->tagdata, array($vars) );
-		$_return = $this->EE->TMPL->parse_variables_row($this->EE->TMPL->tagdata, $vars); 
+		// $_return = ee()->TMPL->parse_variables( ee()->TMPL->tagdata, array($vars) );
+		$_return = ee()->TMPL->parse_variables_row(ee()->TMPL->tagdata, $vars); 
 
 		$_return = str_replace('dt_no_results', 'no_results', $_return);
 
