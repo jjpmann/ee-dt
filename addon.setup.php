@@ -6,8 +6,6 @@ return array(
     'name'        => 'DT Plugin',
     'description' => 'Date/Plugin for ExpressionEngine',
     'version'     => '2.0',
-    'namespace'   => '',
-    'settings_exist' => FALSE,
-    'plugin.typography' => TRUE
+    'namespace'   => 'EE\Dt',
 );
 

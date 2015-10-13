@@ -1,5 +1,7 @@
 <?php
 
+namespace EE\Dt;
+
 class Dt
 {
 
