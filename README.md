@@ -68,6 +68,22 @@ Outputs: **02/04/09**
 
   Adds or subtracts a value in seconds to current/set date.
 
+## Examples
+
+### Third Saturday of each month
+
+
+    Now: {current_time format="%m/%d/%y"} <br>
+
+    {exp:dt set='third saturday of this month'} == {current_time format="%m/%d/%y"}<br>
+
+    {if '{exp:dt set="first monday of this month"}' == '{current_time format="%m/%d/%y"}'}
+
+    YAY
+
+    {/if}
+
+
 ## Changelog
 
 
