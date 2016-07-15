@@ -10,7 +10,7 @@
 ### Security to invite users to upgrade in case of vulnerabilities.
 -->
 
-## [2.0.1] - 2015-07-14
+## [2.0.2] - 2015-07-14
 
 ### Added
 new composer installer
