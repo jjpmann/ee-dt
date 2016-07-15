@@ -12,7 +12,7 @@ __New:__ composer installer
 
 Read more about this *here*
 
-__Old:__ Manual
+__Old:__ manual
 
 move files into 'dt' folder inside of system/user/addons
 
