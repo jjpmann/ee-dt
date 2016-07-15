@@ -4,6 +4,14 @@
 
 The DT Plugin displays dates with formatting and allows you to add days, months, years to the current date or a static date you set.
 
+## Installation
+
+__New__ composer installer
+
+    composer require jjpmann/ee-dt
+
+Read more about this *here*
+
 ## Usage
 
 ### `{exp:dt}`
@@ -83,47 +91,3 @@ Outputs: **02/04/09**
 
     {/if}
 
-
-## Changelog
-
-
-### 2.0  
-
-Update plugin for EE3
-
-### 1.4.3
-
-Added check for // in set method ( Feature ticket <a href="http://devot-ee.com/add-ons/support/dt-plugin/viewthread/13740">http://devot-ee.com/add-ons/support/dt-plugin/viewthread/13740</a> )
-
-### 1.4.2  
-
-Fixed bug in 2.8.0 ( Thanks <a href="http://devot-ee.com/profile/user90086456"> @springworks</a> )
-
-### 1.4.1  
-
-Fixed Count and total_results  bug by using correct template parser  (Thanks <a href="http://devot-ee.com/members/profile/bransinanderson">@bransin</a>)
-
-### 1.4  
-
-Added dt_no_results to fix no_results bug when wrapping entry loops
-
-### 1.3  
-
-Added wrap tag for using with entry loops
-
-### 1.1  
-
-Fixed parse bug (thanks Ben)
- 
-### 1  
-
-Added hour, minute, second to plugin
-EE format is now default - use ee_format="false" for php format
-
-### 0.2  
-Update to include EE date formats by using ee_format="true"
-Also fixed constructor
-
-### 0.1  
-
-Initial release
