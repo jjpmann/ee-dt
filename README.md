@@ -6,13 +6,13 @@ The DT Plugin displays dates with formatting and allows you to add days, months,
 
 ## Installation
 
-__New__ composer installer
+__New:__ composer installer
 
     composer require jjpmann/ee-dt
 
 Read more about this *here*
 
-__Old__ Manual
+__Old:__ Manual
 
 move files into 'dt' folder inside of system/user/addons
 
