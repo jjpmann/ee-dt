@@ -12,6 +12,10 @@ __New__ composer installer
 
 Read more about this *here*
 
+__Old__ Manual
+
+move files into 'dt' folder inside of system/user/addons
+
 ## Usage
 
 ### `{exp:dt}`
