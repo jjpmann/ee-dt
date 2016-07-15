@@ -12,11 +12,9 @@
             "homepage": "http://github.com/jjpmann"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.10",
         "composer/installers": ">=1.1.0"
-
     },
     "extra": {
         "installer-name": "dt"
