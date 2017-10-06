@@ -10,6 +10,12 @@
 ### Security to invite users to upgrade in case of vulnerabilities.
 -->
 
+## [2.0.3] - 2017-10-06
+
+### Added
+Local setting to switch language
+
+
 ## [2.0.2] - 2015-07-14
 
 ### Added

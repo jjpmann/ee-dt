@@ -48,10 +48,22 @@ Outputs: **Saturday Nov 3, 1990**
 
 if set to 'false'dt will parse the date using php formating: http://php.net/manual/en/function.strftime.php 
    
-    {exp:dt set="11/03/90" format="%A %b %e, %Y"}
+    {exp:dt set="11/03/90" format="%A %B %e, %Y"}
 
-Outputs: **Saturday Nov 3, 1990**
-    
+Outputs: **Saturday November 3, 1990**
+
+##### language
+
+  Translates based on system languages
+
+* fr_FR : French
+* es_ES : Spanish
+* nl_NL : Dutch
+
+    {exp:dt set="11/03/90" language="es_ES" format="%A %b %e, %Y"}
+
+Outputs: **sábado noviembre  3, 1990**
+
 ##### day
   
   Adds or subtracts a value in days to current/set date.

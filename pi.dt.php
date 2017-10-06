@@ -47,6 +47,10 @@ class Dt
 
         $dt = (ee()->TMPL->fetch_param('set') ? ee()->TMPL->fetch_param('set') : '');
 
+        if (ee()->TMPL->fetch_param('language') !== false) {
+            setlocale(LC_ALL, ee()->TMPL->fetch_param('language'));
+        }
+
         $this->_set($dt);
 
         $this->_add();
