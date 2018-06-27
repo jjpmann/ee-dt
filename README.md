@@ -9,6 +9,9 @@ The DT Plugin displays dates with formatting and allows you to add days, months,
 
 ## Change Log
 
+- Version 1.4.4
+Fix static function call for usage ( Bug https://devot-ee.com/add-ons/support/dt-plugin/viewthread/16645 )
+
 - Version 1.4.3 
 Added check for // in set method ( Feature ticket http://devot-ee.com/add-ons/support/dt-plugin/viewthread/13740 )
 

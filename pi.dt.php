@@ -17,7 +17,7 @@
 
 $plugin_info = array(
   'pi_name' => 'DT (date plugin)',
-  'pi_version' => '1.4.3',
+  'pi_version' => '1.4.4',
   'pi_author' => 'Jerry Price',
   'pi_author_url' => 'http://viminteractive.com/ee_plugins/dt',
   'pi_description' => 'many date functions',
@@ -221,7 +221,7 @@ class Dt
 	//      Usage
 	//
 	//  Make sure and use output buffering
-	function usage()
+	public static function usage()
 	{
 			ob_start();
 	?>
